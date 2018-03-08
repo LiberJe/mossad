@@ -1,26 +1,26 @@
 console.log("hello,mossad~")
 
-// var fpsEle = document.createElement("div")
-// var fpsState = {
-//   _fps: 0
-// }
+var fpsEle = document.createElement("div")
+var fpsState = {
+  _fps: 0
+}
 
-// Object.defineProperty(fpsState, 'fps', {
-//   get: function() {
-//     return this._fps
-//   },
-//   set: function(value) {
-//     fpsEle.innerText = value
-//     this._fps = value
-//   }
-// })
+Object.defineProperty(fpsState, 'fps', {
+  get: function() {
+    return this._fps
+  },
+  set: function(value) {
+    fpsEle.innerText = value
+    this._fps = value
+  }
+})
 
-// fpsState.fps = 0
+fpsState.fps = 0
 
-// fpsEle.style.cssText = "position: fixed; top: 0; right: 0;"
-// fpsEle.innerText = fpsState.fps
+fpsEle.style.cssText = "position: fixed; top: 0; right: 0;"
+fpsEle.innerText = fpsState.fps
 
-// document.body.appendChild(fpsEle)
+document.body.appendChild(fpsEle)
 
 // var mossad = setInterval(function() {
 //   fpsState.fps += 1
@@ -55,6 +55,7 @@ var loop = function () {
   if (now > 1000 + lastTime) {
     var fps = Math.round((frame * 1000) / (now - lastTime))
     console.log(`${new Date()} 1S内 FPS：`, fps) 
+    fpsState.fps = fps
     frame = 0
     lastTime = now
   }
