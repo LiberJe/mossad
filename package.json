@@ -1,0 +1,22 @@
+{
+  "name": "mossad",
+  "version": "0.0.1",
+  "description": "A mobile rolling performance observation tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiberJe/mossad.git"
+  },
+  "keywords": [
+    "mossad"
+  ],
+  "author": "JeLewine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LiberJe/mossad/issues"
+  },
+  "homepage": "https://github.com/LiberJe/mossad#readme"
+}
