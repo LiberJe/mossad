@@ -22,10 +22,6 @@ fpsEle.innerText = fpsState.fps
 
 document.body.appendChild(fpsEle)
 
-// var mossad = setInterval(function() {
-//   fpsState.fps += 1
-// }, 1000)
-
 
 var rAF = function () {
   return (
@@ -44,11 +40,10 @@ var lastFameTime = Date.now()
  
 var loop = function () {
   var now = Date.now()
-  var fs = (now - lastFameTime)
-  var fps = Math.round(1000 / fs)
+  var ps = (now - lastFameTime)
+  var fps = Math.round(1000 / ps)
 
   lastFameTime = now
-  // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
   allFrameCount++
   frame++
 

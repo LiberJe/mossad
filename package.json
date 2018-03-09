@@ -4,7 +4,7 @@
   "description": "A mobile rolling performance observation tool",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon ./example/server.js"
+    "test": "node ./example/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
   "dependencies": {},
   "devDependencies": {
     "express": "^4.16.2",
-    "nodemon": "^1.17.1",
     "opn": "^5.2.0"
   }
 }
