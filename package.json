@@ -4,7 +4,8 @@
   "description": "A mobile rolling performance observation tool",
   "main": "index.js",
   "scripts": {
-    "test": "node ./example/server.js"
+    "test": "node ./example/server.js",
+    "start": "webpack-dev-server --inline --progress  --content-base example/ --config example/webpack.conf.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,9 @@
   "dependencies": {},
   "devDependencies": {
     "express": "^4.16.2",
-    "opn": "^5.2.0"
+    "opn": "^5.2.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
   }
 }
