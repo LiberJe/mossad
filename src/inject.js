@@ -54,7 +54,6 @@ var loop = function () {
 
   if (now > 1000 + lastTime) {
     var fps = Math.round((frame * 1000) / (now - lastTime))
-    console.log(`${new Date()} 1S内 FPS：`, fps) 
     fpsState.fps = fps
     frame = 0
     lastTime = now

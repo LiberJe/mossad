@@ -10,9 +10,8 @@ class MossadWebpackPlugin {
 
   apply (compiler) {
     compiler.plugin('compilation', (compilation) => {
-      console.log('The compiler is starting a new compilation...');
       const injectPos = '</body>'
-  
+      
       compilation.plugin(
         'html-webpack-plugin-before-html-processing',
         data => {
