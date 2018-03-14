@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MossadPlugin = require('../src')
 
 module.exports = {
@@ -9,10 +10,9 @@ module.exports = {
     path: path.resolve(__dirname)
   },
   plugins: [
-    new MossadPlugin({
-      filename: [
-        'index.html'
-      ]
-    })
+    new HtmlWebpackPlugin({
+      title: 'Hello Mossad!'
+    }),
+    new MossadPlugin()
   ]
 }
