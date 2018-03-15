@@ -13,6 +13,7 @@ A mobile rolling performance observation webpack plugin.
 const MossadWebpackPlugin = require('mossad')
 
 /* .... */
+
 plugins: [
   new HtmlWebpackPlugin(),
   new MossadWebpackPlugin()
