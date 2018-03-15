@@ -9,13 +9,13 @@ Object.defineProperty(fpsState, 'fps', {
   },
   set: function(value) {
     fpsEle.innerText = value
-    if (fpsState.fps > 55) {
-      fpsEle.style.color = "green"
-    } else if (fpsState.fps > 30) {
-      fpsEle.style.color = "yellow"
-    } else {
-      fpsEle.style.color = "red"
-    }
+    // if (fpsState.fps > 55) {
+    //   fpsEle.style.color = "green"
+    // } else if (fpsState.fps > 30) {
+    //   fpsEle.style.color = "yellow"
+    // } else {
+    //   fpsEle.style.color = "red"
+    // }
     this._fps = value
   }
 })
@@ -23,7 +23,7 @@ Object.defineProperty(fpsState, 'fps', {
 fpsState.fps = 0
 
 fpsEle.innerText = fpsState.fps
-fpsEle.style.cssText = "position: fixed; top: 0; right: 0;z-index: 9999999; width: 25px; height: 25px; background: #f5f5f5; color: #666; line-height: 25px; text-align: center;"
+fpsEle.style.cssText = "position: fixed; bottom: 80px; right: 20px;z-index: 9999999; width: 25px; height: 25px; border-radius: 2px; background: #f5f5f5; color: #666; line-height: 25px; text-align: center;"
 
 document.body.appendChild(fpsEle)
 
