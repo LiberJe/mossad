@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
+
 class MossadWebpackPlugin {
   constructor (options = {}) {
     let injectScript = fs.readFileSync(__dirname+'/inject.js', 'utf-8')
@@ -14,8 +15,11 @@ class MossadWebpackPlugin {
       
       compilation.plugin(
         'html-webpack-plugin-before-html-processing',
-        data => {
+        (data, cb) => {
           data.html = data.html.replace(`${injectPos}`, `${this.injection}${injectPos}`)
+          if (cb) {
+            cb(null, data)
+          }
         }
       )
     })
