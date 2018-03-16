@@ -16,7 +16,7 @@ class MossadWebpackPlugin {
       compilation.plugin(
         'html-webpack-plugin-before-html-processing',
         (data, cb) => {
-          data.html = data.html.replace(`${injectPos}`, `${this.injection}${injectPos}`)
+          data.html = data.html.replace(injectPos, `${this.injection}${injectPos}`)
           if (cb) {
             cb(null, data)
           }
